@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gradeapp
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gradeapp
+  template:
+    metadata:
+      labels:
+        app: gradeapp
+    spec:
+      containers:
+      - name: gradeapp
+        image: 302263048119.dkr.ecr.us-east-2.amazonaws.com/gradeapp:latest
+        command: ["python"]
+        args: ["app.py"]
+        workingDir: /app
+        ports:
+        - containerPort: 8888
