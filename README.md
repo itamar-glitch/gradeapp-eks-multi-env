@@ -36,9 +36,8 @@ gradeapp-eks-multi-env/
    ```
 
 2. Configure environment variables:
-   ```bash
+   ```
    export AWS_REGION=us-east-2
-   export TF_VAR_environment=stage  # or prod
    ```
 
 3. Initialize Terraform:
@@ -64,20 +63,6 @@ Each environment (stage/prod) has its own:
 - Variable definitions
 - Terraform state
 - Resource configurations
-
-## Security Notes
-
-- Never commit `.tfstate` files
-- Keep sensitive variables in environment variables or secure secret management
-- Use IAM roles with least privilege
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
 
 ## License
 
