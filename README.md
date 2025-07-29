@@ -63,7 +63,3 @@ Each environment (stage/prod) has its own:
 - Variable definitions
 - Terraform state
 - Resource configurations
-
-## License
-
-MIT License 
